@@ -15,7 +15,7 @@ namespace Walterlv.Miracle.Internal
 
             // 获取主页背景图片下载地址。
             Match imgurlMatch = Regex.Match(html,
-                "(?<=(g_img={.*url:'))http://.*?\\.jpg(?=('.*}))|(?<=(<div\\sid=\"bgDiv\".*style='.*background-image:\\s*url\\(\"))(http://.*?\\.jpg)(?=(\"\\);.*'.*>))");
+                "(?<=(g_img={.*?url:'))http://.*?\\.jpg(?=('.*}))|(?<=(<div\\sid=\"bgDiv\".*?style='.*?background-image:\\s*url\\(\"))(http://.*?\\.jpg)(?=(\"\\);.*?'.*?>))");
             if (!imgurlMatch.Success)
             {
                 return null;
@@ -23,7 +23,7 @@ namespace Walterlv.Miracle.Internal
             string imgurl = imgurlMatch.Value;
 
             // 获取图片名称。
-            Match imgnameMatch = Regex.Match(imgurl, "(?<=/)\\w*(?=_.*\\.jpg)");
+            Match imgnameMatch = Regex.Match(imgurl, "(?<=/)\\w*(?=_.*?\\.jpg)");
             if (!imgnameMatch.Success)
             {
                 return null;
