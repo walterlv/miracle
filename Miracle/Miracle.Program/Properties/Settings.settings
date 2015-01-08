@@ -1,7 +1,21 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Walterlv.Miracle.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BingUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://cn.bing.com/</Value>
+    </Setting>
+    <Setting Name="ImageUrlPatternFromBingUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">(?&lt;=(g_img={.*?url:'))http://.*?\.jpg(?=('.*}))|(?&lt;=(&lt;div\sid=\"bgDiv\".*?style='.*?background-image:\s*url\(\"))(http://.*?\.jpg)(?=(\"\);.*?'.*?&gt;))</Value>
+    </Setting>
+    <Setting Name="ImageFileNamePatternFromImageUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">(?&lt;=/)\w*(?=_.*?\.jpg)</Value>
+    </Setting>
+    <Setting Name="BingImageFolderName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">必应</Value>
+    </Setting>
+    <Setting Name="RecentBingImageFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
 </SettingsFile>

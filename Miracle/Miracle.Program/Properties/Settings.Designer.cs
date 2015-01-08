@@ -22,5 +22,66 @@ namespace Walterlv.Miracle.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://cn.bing.com/")]
+        public string BingUrl {
+            get {
+                return ((string)(this["BingUrl"]));
+            }
+            set {
+                this["BingUrl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("(?<=(g_img={.*?url:\'))http://.*?\\.jpg(?=(\'.*}))|(?<=(<div\\sid=\\\"bgDiv\\\".*?style=\'" +
+            ".*?background-image:\\s*url\\(\\\"))(http://.*?\\.jpg)(?=(\\\"\\);.*?\'.*?>))")]
+        public string ImageUrlPatternFromBingUrl {
+            get {
+                return ((string)(this["ImageUrlPatternFromBingUrl"]));
+            }
+            set {
+                this["ImageUrlPatternFromBingUrl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("(?<=/)\\w*(?=_.*?\\.jpg)")]
+        public string ImageFileNamePatternFromImageUrl {
+            get {
+                return ((string)(this["ImageFileNamePatternFromImageUrl"]));
+            }
+            set {
+                this["ImageFileNamePatternFromImageUrl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("必应")]
+        public string BingImageFolderName {
+            get {
+                return ((string)(this["BingImageFolderName"]));
+            }
+            set {
+                this["BingImageFolderName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string RecentBingImageFileName {
+            get {
+                return ((string)(this["RecentBingImageFileName"]));
+            }
+            set {
+                this["RecentBingImageFileName"] = value;
+            }
+        }
     }
 }
